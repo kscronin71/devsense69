@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevSense Feasibility Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>DevSense Feasibility Calculator</h1>
+
+    <label>Project Cost ($):</label>
+    <input type="number" id="costInput" /><br/>
+
+    <label>Square Footage:</label>
+    <input type="number" id="sqftInput" /><br/>
+
+    <label>Zoning Type:</label>
+    <select id="zoneInput">
+      <option value="commercial">Commercial</option>
+      <option value="residential">Residential</option>
+      <option value="mixed">Mixed Use</option>
+    </select><br/>
+
+    <label>Walkability Score (1–10):</label>
+    <input type="number" id="walkInput" /><br/>
+
+    <label>Median Income of Area ($):</label>
+    <input type="number" id="incomeInput" /><br/>
+
+    <button onclick="handleCalculate()">Get Feasibility Score</button>
+
+    <p><strong>Feasibility Score:</strong> <span id="result">Waiting for input...</span></p>
+    <p><strong>Decision:</strong> <span id="decision">TBD</span></p>
+
+    <div class="bar-background">
+      <div id="confidenceBar" class="bar-fill"></div>
+    </div>
+
+    <p><strong>AI Confidence:</strong> <span id="confidenceEmoji">🤖</span></p>
+
+    <p><strong>AI Site Recommendations:</strong></p>
+    <div id="aiRecommendations" class="ai-box">
+      <em>Waiting for analysis...</em>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
